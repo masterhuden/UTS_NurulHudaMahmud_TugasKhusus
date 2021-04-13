@@ -57,12 +57,18 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () {
                   setState(() {
                     result = weight / (height * height);
-                    if (result < 18) {
+                    if (result < 18.5) {
                       status = "Anda Kurus";
-                    } else if (result < 26) {
+                    } else if (result < 25) {
                       status = "Berat Badan Anda Normal";
+                    } else if (result < 30) {
+                      status = "Anda Gemuk";
+                    } else if (result < 35) {
+                      status = "Anda Obesitas Kelas 1";
+                    } else if (result < 40) {
+                      status = "Anda Obesitas Kelas 2";
                     } else {
-                      status = "Anda Kelebihan Berat Badan";
+                      status = "Anda Obesitas Kelas 3";
                     }
                   });
                 },
